@@ -1,8 +1,8 @@
 import React, {useContext, useEffect, useState} from 'react';
-import {Navbar, Nav, NavDropdown} from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import {Navbar, Nav, NavDropdown, Container} from 'react-bootstrap';
 import './Navigation.css';
 import {Context} from "../../Tools/Translate/Wrapper";
+import logo from "./Img/logo.png"
 
 const Navigation = () => {
   const [state, setState] = useState({ activeClass: 'top' });
@@ -35,21 +35,27 @@ const Navigation = () => {
   });
 
   return (
-    <Navbar collapseOnSelect expand="lg" fixed="top" className={`mcnavbar ${state.activeClass}`}>
-      <Link to="/">.Blog-Tree</Link>
-      <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-      <Navbar.Collapse id="responsive-navbar-nav">
-        <Nav className="mr-auto">
-        </Nav>
-        <Nav className="mcnav">
-          <NavDropdown title={getLang(context.locale)} id="nav-dropdown" onSelect={context.selectLanguage}>
-            <NavDropdown.Item eventKey="en">{getLang('en')}</NavDropdown.Item>
-            <NavDropdown.Item eventKey="es">{getLang('es')}</NavDropdown.Item>
-            <NavDropdown.Item eventKey="ru">{getLang('ru')}</NavDropdown.Item>
-            <NavDropdown.Item eventKey="ua">{getLang('ua')}</NavDropdown.Item>
-          </NavDropdown>
-        </Nav>
-      </Navbar.Collapse>
+    <Navbar fixed="top" className={`mcnavbar ${state.activeClass}`}>
+      <Container>
+        <Navbar.Brand href="/"><img src={logo} alt=".Blog-Tree"/></Navbar.Brand>
+        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+        <Navbar.Collapse id="responsive-navbar-nav">
+          {/*<Nav className="me-auto">*/}
+          {/*  <FormControl*/}
+          {/*    placeholder="Search"*/}
+          {/*  />*/}
+          {/*</Nav>*/}
+          <Nav className="mr-auto"/>
+          <Nav className="mcnav">
+            <NavDropdown title={getLang(context.locale)} id="nav-dropdown" onSelect={context.selectLanguage}>
+              <NavDropdown.Item eventKey="en">{getLang('en')}</NavDropdown.Item>
+              <NavDropdown.Item eventKey="es">{getLang('es')}</NavDropdown.Item>
+              <NavDropdown.Item eventKey="ru">{getLang('ru')}</NavDropdown.Item>
+              <NavDropdown.Item eventKey="ua">{getLang('ua')}</NavDropdown.Item>
+            </NavDropdown>
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
     </Navbar>
   );
 }
