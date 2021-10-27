@@ -1,6 +1,6 @@
 {
   "name": "blog-tree",
-  "homepage": "https://zagovorichev.github.io",
+  "homepage": "https://blog-tree.github.io",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
