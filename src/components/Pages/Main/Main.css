@@ -11,6 +11,10 @@
   margin-left: auto;
 }
 
+.section .container h2 {
+  font-size: 1.2em;
+}
+
 @media (min-width: 576px) {
   .container {
     max-width: 540px;

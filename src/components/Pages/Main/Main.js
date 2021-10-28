@@ -1,6 +1,11 @@
 import React from 'react';
 import './Main.css';
-import {Row, Col, Container} from "react-bootstrap";
+import {Row, Col, Container, Table} from "react-bootstrap";
+import github_pages from './Img/GitHubPages.png';
+import firebase from './Img/firebase.png';
+import jenkins from './Img/jenkins.png';
+import traefik from './Img/traefik.png';
+import serverless from './Img/serverless.png';
 
 class Main extends React.Component {
   render() {
@@ -20,76 +25,76 @@ class Main extends React.Component {
               <Row>
                 <Col>
                   <Row>
-                    <Col sm={2}>
-                      <h2>Deploy to github pages</h2>
-                    </Col>
-                    <Col sm={2}>
-                      Image
-                    </Col>
-                    <Col sm={8}>
-                      <div>Article description and content</div>
-                    </Col>
-                  </Row>
-                </Col>
-              </Row>
-              <Row>
-                <Col>
-                  <Row>
-                    <Col sm={2}>
-                      <h2>Deploy to GCP fire</h2>
-                    </Col>
-                    <Col sm={2}>
-                      Image
-                    </Col>
-                    <Col sm={8}>
-                      <div>Article description and content</div>
+                    <Col>
+                      <Table>
+                        <tr>
+                          <td className={`align-middle`}><h2>Deployment to GitHub pages</h2></td>
+                          <td><img src={github_pages} alt={`GitHub Pages`} /></td>
+                          <td className={`text-muted align-middle`}>Очень простой способ опубликовать свой сайт бесплатно, без домена и с минимальными усилиями.
+                            Рассмотрим на примере ReactJs приложения. Но в целом есть возможность использовать любой
+                            фреймворк.</td>
+                        </tr>
+                      </Table>
                     </Col>
                   </Row>
                 </Col>
               </Row>
               <Row>
                 <Col>
-                  <Row>
-                    <Col sm={2}>
-                      <h2>Jenkins-Agent for deployment</h2>
-                    </Col>
-                    <Col sm={2}>
-                      Image
-                    </Col>
-                    <Col sm={8}>
-                      <div>Article description and content</div>
-                    </Col>
-                  </Row>
+                  <Table>
+                    <tr>
+                      <td className={`text-muted align-middle`}>
+                        Так же бесплатно можно развернуть свой сайт у Гугла в Firebase.
+                      </td>
+                      <td><img src={firebase} alt={`Firebase`} /></td>
+                      <td className={`align-middle`}><h2>Deployment to Firebase Google</h2></td>
+                    </tr>
+                  </Table>
                 </Col>
               </Row>
               <Row>
                 <Col>
-                  <Row>
-                    <Col sm={2}>
-                      <h2>Serverless Bref Lambda project</h2>
-                    </Col>
-                    <Col sm={2}>
-                      Image
-                    </Col>
-                    <Col sm={8}>
-                      <div>Article description and content</div>
-                    </Col>
-                  </Row>
+                  <Table>
+                    <tr>
+                      <td><img src={traefik} alt={`Traefik`} /></td>
+                      <td className={`text-muted align-middle`}>
+                        Установка и настройка локального Traefik + Portainer для окружения в Docker.
+                        Настройка сертификатов HTTPS c MkCert для локальных адресов. + Windows WSL 2
+                        с доступами к проектам из Debian или Ubuntu.
+                      </td>
+                      <td className={`align-middle`}><h2>Traefik...</h2></td>
+                    </tr>
+                  </Table>
                 </Col>
               </Row>
               <Row>
                 <Col>
-                  <Row>
-                    <Col sm={2}>
-                      <h2>Local Traefik</h2>
-                    </Col>
-                    <Col sm={2}>
-                      Image
-                    </Col>
-                    <Col sm={8}>
-                      <div>Article description and content</div>
-                    </Col>
-                  </Row>
+                  <Table>
+                    <tr>
+                      <td className={`text-muted align-middle`}>
+                        Пошаговая инструкция по настройке и установке Jenkins. Настройка разворачивания прокета
+                        используя Jenkins-Agent. Полностью рабочее окружение на vagrant, в котором работает
+                        Docker для запуска деплоя в нем. Jenkins запускаем на локальном Docker.
+                      </td>
+                      <td><img src={jenkins} alt={`Jenkins`} /></td>
+                      <td className={`align-middle`}><h2>Jenkins Agent</h2></td>
+                    </tr>
+                  </Table>
+                </Col>
+              </Row>
+              <Row>
+                <Col>
+
+                  <Table>
+                    <tr>
+                      <td><img src={serverless} alt={`Serverless framework`} /></td>
+                      <td className={`text-muted align-middle`}>
+                        Как использовать Serverless фреймворк для того чтобы развернуть AWS Lambda функции
+                        с нестандартным стеком : PHP8 + Bref.
+                      </td>
+                      <td className={`align-middle`}><h2>Serverless framework</h2></td>
+                    </tr>
+                  </Table>
                 </Col>
               </Row>
               <Row>
@@ -103,6 +108,21 @@ class Main extends React.Component {
                     </Col>
                     <Col sm={8}>
                       <div>Article description and content</div>
+                    </Col>
+                  </Row>
+                </Col>
+              </Row>
+              <Row>
+                <Col>
+                  <Row>
+                    <Col sm={2}>
+                      <h2>AWS Glue</h2>
+                    </Col>
+                    <Col sm={2}>
+                      Image
+                    </Col>
+                    <Col sm={8}>
+                      <div>Python Spark</div>
                     </Col>
                   </Row>
                 </Col>
