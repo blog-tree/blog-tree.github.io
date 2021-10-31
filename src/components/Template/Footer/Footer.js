@@ -2,6 +2,8 @@ import React from 'react';
 import { BrowserRouter as Router, Link } from "react-router-dom";
 import './Footer.css';
 import {FormattedMessage} from "react-intl";
+import {Container, Row, Col} from "react-bootstrap";
+import logo from "./Img/logo.png";
 
 class Footer extends React.Component {
   
@@ -10,28 +12,36 @@ class Footer extends React.Component {
     return (
       <Router>
         <footer className="footer">
-          <div className="container">
+          <Container>
             <div className="line" />
-              <div className="row">
-                <div className="col-12 col-sm-6 col-lg-3">
-                  <div className="block">
-                    <h4 className="bolder title"><FormattedMessage
-                      id = "content.about"
-                      defaultMessage="About"
-                    /></h4>
-                    <Link to="license"><FormattedMessage
-                      id = "content.license"
-                      defaultMessage="License"
-                    /></Link>
-                  </div>
+            <Row>
+              <Col>
+                <img src={logo} alt={`Blog-Tree`} />
+              </Col>
+              <Col>
+                <div className="block">
+                  <h4 className="bolder title"><FormattedMessage
+                    id = "content.about"
+                    defaultMessage="About"
+                  /></h4>
+                  <Link to="license"><FormattedMessage
+                    id = "content.license"
+                    defaultMessage="License"
+                  /></Link>
+                  <br/>
+                  <Link to="info"><FormattedMessage
+                    id = "content.info"
+                    defaultMessage="Info"
+                  /></Link>
                 </div>
-              </div>
-              <div className="row mt-4 text-muted">
-                <div className="col-12">
-                  <div className="text-muted mt-2">© { year } zagovorichev.github.io</div>
-                </div>
-              </div>
-          </div>
+              </Col>
+            </Row>
+            <Row>
+              <Col>
+                <div className="text-muted mt-2">© { year } blog-tree.github.io</div>
+              </Col>
+            </Row>
+          </Container>
         </footer>
       </Router>
     );
