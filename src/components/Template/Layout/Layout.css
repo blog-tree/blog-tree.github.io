@@ -1,13 +1,18 @@
 .top-bg {
-    position: absolute;
+    position: fixed;
     width: 70%;
     top: 0;
     height: 100%;
     right: 0;
 }
+.top-bg.with-menu {
+    top: 100px;
+}
+
 .top-bg img {
     width: 100%;
     height: auto;
+    opacity: 0.05;
 }
 
 .dot {

@@ -2,11 +2,11 @@ import React, {useContext, useEffect, useState} from 'react';
 import {Navbar, Nav, NavDropdown, Container} from 'react-bootstrap';
 import './Navigation.css';
 import {Context} from "../../Tools/Translate/Wrapper";
-import logo from "./Img/logo.png"
 
 const Navigation = () => {
   const [state, setState] = useState({ activeClass: 'top' });
   const context = useContext(Context);
+
   const scrollHandler = () => {
     let activeClass = 'stick';
     if (window.scrollY <= 30) {
@@ -14,6 +14,7 @@ const Navigation = () => {
     }
     setState({ activeClass });
   };
+
   const getLang = (code) => {
     switch (code) {
       case 'ru':
@@ -37,7 +38,7 @@ const Navigation = () => {
   return (
     <Navbar fixed="top" className={`mcnavbar ${state.activeClass}`}>
       <Container>
-        <Navbar.Brand href="/"><img src={logo} alt=".Blog-Tree"/></Navbar.Brand>
+        <Navbar.Brand href="/">.Blog-Tree</Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           {/*<Nav className="me-auto">*/}
