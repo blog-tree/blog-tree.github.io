@@ -1,6 +1,6 @@
 import React from 'react';
 import './Main.css';
-import {Row, Col, Container, Table} from "react-bootstrap";
+import {Row, Col, Container} from "react-bootstrap";
 import github_pages from './Img/GitHubPages.png';
 import firebase from './Img/firebase.png';
 import jenkins from './Img/jenkins.png';
@@ -8,6 +8,11 @@ import traefik from './Img/traefik.png';
 import serverless from './Img/serverless.png';
 import ansible from './Img/ansible.png';
 import awsGlue from './Img/aws_glue.png';
+import TopicRowComponent from "../../Content/TopicRow/Row/TopicRowComponent";
+import TopicRowH2 from "../../Content/TopicRow/H2/TopicRowH2";
+import TopicRowImg from "../../Content/TopicRow/Img/TopicRowImg";
+import TopicRowText from "../../Content/TopicRow/Text/TopicRowText";
+import {FormattedMessage} from "react-intl";
 
 class Main extends React.Component {
   render() {
@@ -24,120 +29,52 @@ class Main extends React.Component {
               </Row>
             </Container>
             <Container>
-              <Row>
-                <Col>
-                  <Row>
-                    <Col>
-                      <Table>
-                        <tbody>
-                        <tr>
-                          <td className={`align-middle`}><h2>Deployment to GitHub pages</h2></td>
-                          <td><img src={github_pages} alt={`GitHub Pages`} /></td>
-                          <td className={`text-muted align-middle`}>Очень простой способ опубликовать свой сайт бесплатно, без домена и с минимальными усилиями.
-                            Рассмотрим на примере ReactJs приложения. Но в целом есть возможность использовать любой
-                            фреймворк.</td>
-                        </tr>
-                        </tbody>
-                      </Table>
-                    </Col>
-                  </Row>
-                </Col>
-              </Row>
-              <Row>
-                <Col>
-                  <Table>
-                    <tbody>
-                    <tr>
-                      <td className={`text-muted align-middle`}>
-                        Так же бесплатно можно развернуть свой сайт у Гугла в Firebase.
-                      </td>
-                      <td><img src={firebase} alt={`Firebase`} /></td>
-                      <td className={`align-middle`}><h2>Deployment to Firebase Google</h2></td>
-                    </tr>
-                    </tbody>
-                  </Table>
-                </Col>
-              </Row>
-              <Row>
-                <Col>
-                  <Table>
-                    <tbody>
-                    <tr>
-                      <td><img src={traefik} alt={`Traefik`} /></td>
-                      <td className={`text-muted align-middle`}>
-                        Установка и настройка локального Traefik + Portainer для окружения в Docker.
-                        Настройка сертификатов HTTPS c MkCert для локальных адресов. + Windows WSL 2
-                        с доступами к проектам из Debian или Ubuntu.
-                      </td>
-                      <td className={`align-middle`}><h2>Traefik...</h2></td>
-                    </tr>
-                    </tbody>
-                  </Table>
-                </Col>
-              </Row>
-              <Row>
-                <Col>
-                  <Table>
-                    <tbody>
-                    <tr>
-                      <td className={`text-muted align-middle`}>
-                        Пошаговая инструкция по настройке и установке Jenkins. Настройка разворачивания прокета
-                        используя Jenkins-Agent. Полностью рабочее окружение на vagrant, в котором работает
-                        Docker для запуска деплоя в нем. Jenkins запускаем на локальном Docker.
-                      </td>
-                      <td><img src={jenkins} alt={`Jenkins`} /></td>
-                      <td className={`align-middle`}><h2>Jenkins Agent</h2></td>
-                    </tr>
-                    </tbody>
-                  </Table>
-                </Col>
-              </Row>
-              <Row>
-                <Col>
-                  <Table>
-                    <tbody>
-                    <tr>
-                      <td><img src={serverless} alt={`Serverless framework`} /></td>
-                      <td className={`text-muted align-middle`}>
-                        Как использовать Serverless фреймворк для того чтобы развернуть AWS Lambda функции
-                        с нестандартным стеком : PHP8 + Bref.
-                      </td>
-                      <td className={`align-middle`}><h2>Serverless framework</h2></td>
-                    </tr>
-                    </tbody>
-                  </Table>
-                </Col>
-              </Row>
-              <Row>
-                <Col>
-                  <Table>
-                    <tbody>
-                    <tr>
-                      <td><img src={ansible} alt={`Ansible`} /></td>
-                      <td className={`align-middle`}><h2>Ansible</h2></td>
-                      <td className={`text-muted align-middle`}>
-                        Ansible как инструмент для разворачивания проектов.
-                      </td>
-                    </tr>
-                    </tbody>
-                  </Table>
-                </Col>
-              </Row>
-              <Row>
-                <Col>
-                  <Table>
-                    <tbody>
-                    <tr>
-                      <td className={`align-middle`}><h2>AWS Glue</h2></td>
-                      <td className={`text-muted align-middle`}>
-                        Использование AWS Glue для генерации .xml отчетов по BigData.
-                      </td>
-                      <td><img src={awsGlue} alt={`AWS Glue`} /></td>
-                    </tr>
-                    </tbody>
-                  </Table>
-                </Col>
-              </Row>
+
+              <TopicRowComponent>
+                <TopicRowH2><FormattedMessage
+                  id = "content.github_pages_title_small"
+                  defaultMessage="Deployment to GitHub pages"
+                /></TopicRowH2>
+                <TopicRowImg src={github_pages} alt={`GitHub Pages`} />
+                <TopicRowText><FormattedMessage id = "content.github_pages_description"/></TopicRowText>
+              </TopicRowComponent>
+
+              <TopicRowComponent>
+                <TopicRowText><FormattedMessage id = "content.firebase_description"/></TopicRowText>
+                <TopicRowImg src={firebase} alt={`Firebase`} />
+                <TopicRowH2><FormattedMessage id = "content.firebase_title_small"/></TopicRowH2>
+              </TopicRowComponent>
+
+              <TopicRowComponent>
+                <TopicRowImg src={traefik} alt={`Traefik`} />
+                <TopicRowText><FormattedMessage id = "content.traefik_description"/></TopicRowText>
+                <TopicRowH2>Traefik...</TopicRowH2>
+              </TopicRowComponent>
+
+              <TopicRowComponent>
+                <TopicRowText><FormattedMessage id = "content.jenkins_agent_description"/></TopicRowText>
+                <TopicRowImg src={jenkins} alt={`Jenkins`} />
+                <TopicRowH2>Jenkins Agent</TopicRowH2>
+              </TopicRowComponent>
+
+              <TopicRowComponent>
+                <TopicRowImg src={serverless} alt={`Serverless framework`} />
+                <TopicRowH2><FormattedMessage id = "content.serverless_title_small"/></TopicRowH2>
+                <TopicRowText><FormattedMessage id = "content.serverless_description"/></TopicRowText>
+              </TopicRowComponent>
+
+              <TopicRowComponent>
+                <TopicRowText><FormattedMessage id = "content.ansible_description"/></TopicRowText>
+                <TopicRowImg src={ansible} alt={`Ansible`} />
+                <TopicRowH2>Ansible</TopicRowH2>
+              </TopicRowComponent>
+
+              <TopicRowComponent>
+                <TopicRowH2>AWS Glue</TopicRowH2>
+                <TopicRowText><FormattedMessage id = "content.aws_glue_description"/></TopicRowText>
+                <TopicRowImg src={awsGlue} alt={`AWS Glue`} />
+              </TopicRowComponent>
+
             </Container>
           </section>
       </>

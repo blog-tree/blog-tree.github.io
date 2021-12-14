@@ -20,19 +20,10 @@ class Footer extends React.Component {
               </Col>
               <Col>
                 <div className="block">
-                  <h4 className="bolder title"><FormattedMessage
-                    id = "content.about"
-                    defaultMessage="About"
-                  /></h4>
-                  <Link to="license"><FormattedMessage
-                    id = "content.license"
-                    defaultMessage="License"
-                  /></Link>
+                  <h4 className="bolder title"><FormattedMessage id = "gui.about_us"/></h4>
+                  <Link to="license"><FormattedMessage id = "gui.license"/></Link>
                   <br/>
-                  <Link to="info"><FormattedMessage
-                    id = "content.info"
-                    defaultMessage="Info"
-                  /></Link>
+                  <Link to="info"><FormattedMessage id = "gui.info"/></Link>
                 </div>
               </Col>
             </Row>
