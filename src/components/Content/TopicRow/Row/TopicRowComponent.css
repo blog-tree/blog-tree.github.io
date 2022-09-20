@@ -25,3 +25,16 @@
 .topic-row:first-child {
     margin-left: 0;
 }
+
+.planned-topics .topic-row .kids {
+    cursor: default;
+    background-color: #fff;
+    opacity: 0.7;
+}
+
+.planned-topics .topic-row .kids:hover {
+    cursor: default;
+    background-color: #fff;
+    opacity: 0.7;
+}
+

@@ -48,12 +48,12 @@ const Navigation = () => {
           {/*</Nav>*/}
           <Nav className="mr-auto"/>
           <Nav className="mcnav">
-            <NavDropdown title={getLang(context.locale)} id="nav-dropdown" onSelect={context.selectLanguage}>
+            {/*<NavDropdown title={getLang(context.locale)} id="nav-dropdown" onSelect={context.selectLanguage}>
               <NavDropdown.Item eventKey="en">{getLang('en')}</NavDropdown.Item>
               <NavDropdown.Item eventKey="es">{getLang('es')}</NavDropdown.Item>
               <NavDropdown.Item eventKey="ru">{getLang('ru')}</NavDropdown.Item>
               <NavDropdown.Item eventKey="ua">{getLang('ua')}</NavDropdown.Item>
-            </NavDropdown>
+            </NavDropdown>*/}
           </Nav>
         </Navbar.Collapse>
       </Container>

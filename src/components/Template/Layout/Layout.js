@@ -5,6 +5,8 @@ import Footer from '../Footer/Footer';
 import Main from '../../Pages/Main/Main';
 import './Layout.css';
 import logo from './Img/blog-tree_700x400.png';
+import Agile from "../../Pages/Articles/Agile/Agile";
+import Sdlc from "../../Pages/Articles/Sdlc/Sdlc";
 
 const Layout = () => {
   const [state, setState] = useState({ withMenu: 'no' });
@@ -39,6 +41,8 @@ const Layout = () => {
           <Header/>
           <Switch>
             <Route exact path="/" component={Main}/>
+            <Route exact path="/article/agile" component={Agile}/>
+            <Route exact path="/article/sdlc" component={Sdlc}/>
           </Switch>
           <Footer/>
         </div>

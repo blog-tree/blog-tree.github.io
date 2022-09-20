@@ -11,6 +11,16 @@
   margin-left: auto;
 }
 
+.section .container.planned-topics {
+    margin-top: 1rem;
+}
+
+.planned-topics .vote-help {
+    color: #adadad;
+    margin: 2rem;
+    font-weight: bold;
+}
+
 .section .container h2 {
   font-size: 1.2em;
 }
