@@ -1,11 +1,11 @@
-import React, {useContext, useEffect, useState} from 'react';
-import {Navbar, Nav, NavDropdown, Container} from 'react-bootstrap';
+import React, {/*useContext, */useEffect, useState} from 'react';
+import {Navbar, Nav/*, NavDropdown*/, Container} from 'react-bootstrap';
 import './Navigation.css';
-import {Context} from "../../Tools/Translate/Wrapper";
+// import {Context} from "../../Tools/Translate/Wrapper";
 
 const Navigation = () => {
   const [state, setState] = useState({ activeClass: 'top' });
-  const context = useContext(Context);
+  // const context = useContext(Context);
 
   const scrollHandler = () => {
     let activeClass = 'stick';
@@ -15,18 +15,18 @@ const Navigation = () => {
     setState({ activeClass });
   };
 
-  const getLang = (code) => {
-    switch (code) {
-      case 'ru':
-        return 'Ру';
-      case 'ua':
-        return 'Укр';
-      case 'en':
-      case 'es':
-      default:
-        return code;
-    }
-  }
+  // const getLang = (code) => {
+  //   switch (code) {
+  //     case 'ru':
+  //       return 'Ру';
+  //     case 'ua':
+  //       return 'Укр';
+  //     case 'en':
+  //     case 'es':
+  //     default:
+  //       return code;
+  //   }
+  // }
 
   useEffect(() => {
     window.addEventListener('scroll', scrollHandler);

@@ -32,14 +32,14 @@ class Main extends React.Component {
                     </Container>
 
                     <Container>
-                        <TopicRowComponent link={`article/sdlc`}>
+                        <TopicRowComponent link={`/article/sdlc`}>
                             <TopicRowImg src={imgSdlc} alt={`Software Development Life Cycle`}/>
                             <TopicRowH2>SDLC</TopicRowH2>
                             <TopicRowText>Software Development Life Cycle or Software Development Process followed
                             for a software project within a software organization. Detailed plan of the project.</TopicRowText>
                         </TopicRowComponent>
 
-                        <TopicRowComponent link={`article/agile`}>
+                        <TopicRowComponent link={`/article/agile`}>
                             <TopicRowText>
                                 The most recognised methodology for developing a software environment to date.<br />
                                 You should use iterative development only on projects that you want to succeed.<br />

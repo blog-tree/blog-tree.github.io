@@ -6,7 +6,7 @@ export default class TopicRowComponent extends React.Component {
     goToLink = () => {
         const isLink = !!this.props.link;
         if (isLink) {
-            window.open(this.props.link, "_blank")
+            window.open(`/#${this.props.link}`, "_blank")
         }
     };
 
