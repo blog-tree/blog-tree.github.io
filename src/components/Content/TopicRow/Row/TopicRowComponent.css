@@ -18,6 +18,10 @@
     cursor: pointer;
 }
 
+.topic-row .kids:hover img {
+    opacity: 0.3;
+}
+
 .topic-row .kids > * {
     margin-left: 2rem;
 }

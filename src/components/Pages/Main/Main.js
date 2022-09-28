@@ -7,6 +7,9 @@ import jenkins from './Img/jenkins.png';
 import traefik from './Img/traefik.png';
 import serverless from './Img/serverless.png';
 import ansible from './Img/ansible.png';
+import imgDev from './Img/software-development.jpg';
+import imgPm from './Img/pm.jpg';
+import imgTdd from './Img/testing_tdd.png';
 import awsGlue from './Img/aws_glue.png';
 import imgSdlc from './Img/sdlc.png';
 import imgSdlcAgile from './Img/agile-sdlc.jpg';
@@ -32,6 +35,31 @@ class Main extends React.Component {
                     </Container>
 
                     <Container>
+                        <TopicRowComponent link={`/article/management`}>
+                            <TopicRowText>Project management is the processes, methods, skills,
+                                knowledge and experience to achieve specific project goals according
+                                to the acceptance criteria.</TopicRowText>
+                            <TopicRowImg src={imgPm} alt={`Project Management`}/>
+                            <TopicRowH2>Project Management</TopicRowH2>
+                        </TopicRowComponent>
+
+                        <TopicRowComponent link={`/article/tdd`}>
+                            <TopicRowImg src={imgTdd} alt={`Test-Driven Development`}/>
+                            <TopicRowH2>TDD</TopicRowH2>
+                            <TopicRowText>Test-driven development is a software development process relying on
+                                software requirements being converted to test cases before software is fully developed,
+                                and tracking all software development by repeatedly testing the software against all
+                                test cases. This is as opposed to software being developed first and test cases
+                                created later.</TopicRowText>
+                        </TopicRowComponent>
+
+                        <TopicRowComponent link={`/article/dev`}>
+                            <TopicRowH2>Clean Software Development</TopicRowH2>
+                            <TopicRowText>Coding best practices are a set of informal rules that the software
+                                development community employs to help improve software quality.</TopicRowText>
+                            <TopicRowImg src={imgDev} alt={`Software development best practices`}/>
+                        </TopicRowComponent>
+
                         <TopicRowComponent link={`/article/sdlc`}>
                             <TopicRowImg src={imgSdlc} alt={`Software Development Life Cycle`}/>
                             <TopicRowH2>SDLC</TopicRowH2>
@@ -41,8 +69,8 @@ class Main extends React.Component {
 
                         <TopicRowComponent link={`/article/agile`}>
                             <TopicRowText>
-                                The most recognised methodology for developing a software environment to date.<br />
-                                You should use iterative development only on projects that you want to succeed.<br />
+                                The most recognised methodology for developing a software environment to date.
+                                You should use iterative development only on projects that you want to succeed.
                                 The only way to go fast is to go well.
                             </TopicRowText>
                             <TopicRowH2>Agile</TopicRowH2>

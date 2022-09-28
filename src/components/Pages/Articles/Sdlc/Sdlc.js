@@ -7,6 +7,7 @@ import TextBlock from "../../../Content/TopicArticle/Text/TextBlock";
 import SectionTitle from "../../../Content/TopicArticle/SectionTitle/SectionTitle";
 import MainTitle from "../../../Content/TopicArticle/MainTitle/MainTitle";
 import SubSectionTitle from "../../../Content/TopicArticle/SectionTitle/SubSectionTitle";
+import imgServers from "./Img/Servers.jpg";
 
 class Sdlc extends React.Component {
     render() {
@@ -36,6 +37,50 @@ class Sdlc extends React.Component {
                         <TextBlock>Software development plan always has frozen date and has requirements which are
                             continuously changing.</TextBlock>
 
+                        <SubSectionTitle>Phases of SDLC</SubSectionTitle>
+                        <TextBlock>
+                            <ul>
+                                <li>Requirements.<br/> <span className={`text-muted`}>Definition of resources, requirements and expectations of the project.</span>
+                                </li>
+                                <li>Design.<br/> <span className={`text-muted`}>Design of the system. Elements, components, security level, modules, architecture, various interfaces, and data types.</span>
+                                </li>
+                                <li>Software Development.<br/> <span className={`text-muted`}>Implementation in a real product.</span>
+                                </li>
+                                <li>Testing.<br/> <span className={`text-muted`}>Ensuring that the system works as expected.</span>
+                                </li>
+                                <li>UAT/Staging (User Acceptance Testing).<br/> <span className={`text-muted`}>The business is testing.</span>
+                                </li>
+                                <li>Maintenance.<br/> <span className={`text-muted`}>Support for production.</span></li>
+                            </ul>
+                        </TextBlock>
+
+                        <SubSectionTitle>Types of possible environments.</SubSectionTitle>
+                        <TopicRowImg src={imgServers} alt={`Servers`}/>
+
+                        <TextBlock>
+                            <ul>
+                                <li>
+                                    Production Server.<br/> <span className={`text-muted`}>Live environment for the solution.</span>
+                                </li>
+                                <li>
+                                    UAT (User Acceptance Testing) / Staging - Pre-Production.<br/> <span
+                                    className={`text-muted`}>Environment with the same configuration and resources as production.</span>
+                                </li>
+                                <li>
+                                    Test.<br/> <span className={`text-muted`}>Development branch of repository. (When Master is branch for pre-prod and prod with release version).</span>
+                                </li>
+                                <li>
+                                    Nightly.<br/> <span className={`text-muted`}>If Test is not build automatically when dev merged, than nightly can be built at night.</span>
+                                </li>
+                                <li>
+                                    PullRequest / Feature.<br/> <span className={`text-muted`}>Usually it is a docker container within portainer. When PR created - container with this branch deployed.</span>
+                                </li>
+                                <li>
+                                    Dev.<br/> <span className={`text-muted`}>development server, local environment for development. Each developer has own dev environment.</span>
+                                </li>
+                            </ul>
+                        </TextBlock>
+
                         <SectionTitle>SDLC frameworks</SectionTitle>
 
                         <SubSectionTitle>Waterfall</SubSectionTitle>
@@ -59,7 +104,8 @@ class Sdlc extends React.Component {
                                             <span className={`text-muted`}>Limited time for analyse, we were supposed to be done
                                         by date, so we are done.</span></li>
                                         <li>The Design Phase.<br/>
-                                            <span className={`text-muted`}>How many modules, how many teams, etc.</span></li>
+                                            <span className={`text-muted`}>How many modules, how many teams, etc.</span>
+                                        </li>
                                         <li>The Implementation Phase.<br/>
                                             <span className={`text-muted`}>From coding to production.</span></li>
                                     </ol>
@@ -68,15 +114,16 @@ class Sdlc extends React.Component {
                                 <TextBlock>
                                     Waterfall Problems
                                     <ol>
-                                        <li>Late Delivery. <span className={`text-muted`}>Business can't see results until of the end of the development.</span>
+                                        <li>Late Delivery.<br/> <span className={`text-muted`}>Business can't see results until of the end of the development.</span>
                                         </li>
-                                        <li>Frozen requirements. <span className={`text-muted`}>Everything is documented and can't be changed.</span>
+                                        <li>Frozen requirements.<br/> <span className={`text-muted`}>Everything is documented and can't be changed.</span>
                                         </li>
                                     </ol>
                                 </TextBlock>
 
                                 <TextBlock>
-                                    Despite its drawbacks, there are times when a waterfall approach may still be the preferred
+                                    Despite its drawbacks, there are times when a waterfall approach may still be the
+                                    preferred
                                     approach, including when:
                                     <ul>
                                         <li>The project/requirements/customer demand is not prone to change</li>
@@ -91,18 +138,19 @@ class Sdlc extends React.Component {
                             </Col>
                         </Row>
 
-                        <SectionTitle>Spiral Model</SectionTitle>
+                        <SubSectionTitle>Spiral Model</SubSectionTitle>
                         <TextBlock>
                             It is mix of waterfall and iterative approaches.
                             Planning - defining. Risk Analysis - mitigate risks. Engineering - coding/testing/deploying.
                             Evaluation - review + plan next iteration.
                         </TextBlock>
 
-                        <SectionTitle>Rational Unified Process (RUP)</SectionTitle>
+                        <SubSectionTitle>Rational Unified Process (RUP)</SubSectionTitle>
                         <TextBlock>
-                            RUP is a software development process framework. Artifacts, processes, templates, phases,
-                            disciplines.
-                            4 phases: Inception, Elaboration, Construction, Transition. Each phase is 1 or more
+                            <b>RUP</b> is a software development process framework. Artifacts, processes, templates,
+                            phases,
+                            disciplines.<br/>
+                            <b>4 phases:</b> Inception, Elaboration, Construction, Transition. Each phase is 1 or more
                             waterfall iterations.
                         </TextBlock>
                         <TextBlock>
@@ -122,7 +170,7 @@ class Sdlc extends React.Component {
                             </ul>
                         </TextBlock>
 
-                        <SectionTitle>Dynamic System Development Method</SectionTitle>
+                        <SubSectionTitle>Dynamic System Development Method</SubSectionTitle>
                         <TextBlock>
                             DSDM Life Cycle
                             <ol>
@@ -158,6 +206,7 @@ class Sdlc extends React.Component {
                                 <li>Tracking completion status.</li>
                             </ul>
                         </TextBlock>
+
                         <SubSectionTitle>Crystal Methods</SubSectionTitle>
                         <TextBlock>
                             It is a family of methodologies. It allows calculate team size by the Criticality and pick
@@ -175,8 +224,9 @@ class Sdlc extends React.Component {
 
                         <SubSectionTitle>Scrum</SubSectionTitle>
                         <TextBlock>
-                            Scrum, or SCRUM, is a framework for project management (since 1986).<br />
-                            Main Scrum document: <a href={`https://scrumguides.org/scrum-guide.html`}>https://scrumguides.org/scrum-guide.html</a>
+                            Scrum, or SCRUM, is a framework for project management (since 1986).<br/>
+                            Main Scrum document: <a
+                            href={`https://scrumguides.org/scrum-guide.html`}>https://scrumguides.org/scrum-guide.html</a>
                         </TextBlock>
 
                         <TextBlock>
@@ -188,7 +238,8 @@ class Sdlc extends React.Component {
                         <TextBlock>The scrum team assesses progress in time-boxed daily meetings of 15 minutes or fewer,
                             called daily scrums (a form of stand-up meeting). At the end of the sprint, the team holds
                             two further meetings: the sprint review which demonstrates the work done to stakeholders to
-                            elicit feedback, and sprint retrospective which enables the team to reflect and improve.</TextBlock>
+                            elicit feedback, and sprint retrospective which enables the team to reflect and
+                            improve.</TextBlock>
 
                         <TextBlock>A Scrum Master play the role of an Agile coach and facilitates removal of impediments
                             in the path of the development team. Even though the Scrum Master has management
@@ -198,32 +249,40 @@ class Sdlc extends React.Component {
                         <TextBlock>
                             Three Pillars of Scrum
                             <ul>
-                                <li>Transparency<span className={`text-muted`}> &mdash; all team members involved to all processes and activities required for a project.</span>
+                                <li>Transparency.<br/> <span className={`text-muted`}> All team members involved to all processes and activities required for a project.</span>
                                 </li>
-                                <li>Inspection<span className={`text-muted`}> &mdash; review product and its quality with team and customer throughout the project.</span>
+                                <li>Inspection.<br/> <span className={`text-muted`}> Review product and its quality with team and customer throughout the project.</span>
                                 </li>
-                                <li>Adaptation<span className={`text-muted`}> &mdash; be always flexible.</span></li>
+                                <li>Adaptation.<br/> <span className={`text-muted`}> Be always flexible.</span></li>
                             </ul>
                         </TextBlock>
 
                         <TextBlock>
                             Roles
                             <ul>
-                                <li>Product owner <span className={`text-muted`}>Own product backlog - what's need to be build and in what order.</span></li>
-                                <li>Scrum master <span className={`text-muted`}>Practices, rules, events, remove barriers.</span></li>
-                                <li>Development team <span className={`text-muted`}>Everyone in the team (testers, devs, documenters, DBAs...).</span></li>
+                                <li>Product owner. <br/> <span className={`text-muted`}>Own product backlog - what's need to be build and in what order.</span>
+                                </li>
+                                <li>Scrum master.<br/> <span className={`text-muted`}>Practices, rules, events, remove barriers.</span>
+                                </li>
+                                <li>Development team.<br/> <span className={`text-muted`}>Everyone in the team (testers, devs, documenters, DBAs...).</span>
+                                </li>
                             </ul>
                         </TextBlock>
 
                         <TextBlock>
-                            DSM (Daily stand-up meeting / Daily SCRUM). Team sync-up.<br />
-                            Each team member answers to 3QF (3 Question Format): What did I do since the last dsm?
-                            What am I planning/doing today? Impediments?
+                            DSM (Daily stand-up meeting / Daily SCRUM). Team sync-up.<br/>
+                            Each team member answers to 3QF (3 Question Format):
+                            <ul>
+                                <li>What did I do since the last dsm?</li>
+                                <li>What am I planning/doing today?</li>
+                                <li>Impediments?</li>
+                            </ul>
                         </TextBlock>
 
                         <SubSectionTitle>Lean</SubSectionTitle>
                         <TextBlock>
-                            A collection of principles which was created to minimize waste of money. Visualisation of process to reduce it's cost.
+                            A collection of principles which was created to minimize waste of money. Visualisation of
+                            process to reduce it's cost.
                             <span className={`text-muted`}>Wasting time is None-value work; No gold planning; unnecessary process;</span>
                         </TextBlock>
 
@@ -237,8 +296,10 @@ class Sdlc extends React.Component {
                         <TextBlock>
                             <b>Value Stream Mapping</b>
                             <ul>
-                                <li>Lead Time. <span className={`text-muted`}>Total time from request to delivery.</span></li>
-                                <li>Cycle Time. <span className={`text-muted`}>Where some work is performed on the product. (backend)</span></li>
+                                <li>Lead Time.<br /> <span
+                                    className={`text-muted`}>Total time from request to delivery.</span></li>
+                                <li>Cycle Time.<br /> <span className={`text-muted`}>Where some work is performed on the product. (backend)</span>
+                                </li>
                             </ul>
                         </TextBlock>
 
@@ -260,7 +321,21 @@ class Sdlc extends React.Component {
                             more than team can do.</TextBlock>
 
                         <SubSectionTitle>XP &mdash; Extreme Programming</SubSectionTitle>
-                        <TextBlock>It is collection of best practices for development. For example TDD or Pair programming.</TextBlock>
+                        <TextBlock>It is collection of best practices for development. For example TDD or Pair
+                            programming.</TextBlock>
+
+                        <SubSectionTitle>Water Scrum Fall Paradigm</SubSectionTitle>
+
+                        <TextBlock>
+                            <ul>
+                                <li><b>Water.</b> <span
+                                    className={`text-muted`}>Busyness plan, budgeting, design, requirements, estimation.</span></li>
+                                <li><b>SCRUM.</b> <span
+                                    className={`text-muted`}>Small SCRUM teams doing development.</span></li>
+                                <li><b>Fall.</b> <span
+                                    className={`text-muted`}>Integration testing release.</span></li>
+                            </ul>
+                        </TextBlock>
                     </Container>
                 </section>
             </>

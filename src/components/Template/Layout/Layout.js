@@ -7,6 +7,9 @@ import './Layout.css';
 import logo from './Img/blog-tree_700x400.png';
 import Agile from "../../Pages/Articles/Agile/Agile";
 import Sdlc from "../../Pages/Articles/Sdlc/Sdlc";
+import Dev from "../../Pages/Articles/Development/Dev";
+import TDD from "../../Pages/Articles/TDD/TDD";
+import Management from "../../Pages/Articles/Management/Management";
 
 const Layout = () => {
   const [state, setState] = useState({ withMenu: 'no' });
@@ -43,6 +46,9 @@ const Layout = () => {
             <Route exact path="/" component={Main}/>
             <Route exact path="/article/agile" component={Agile}/>
             <Route exact path="/article/sdlc" component={Sdlc}/>
+            <Route exact path="/article/dev" component={Dev}/>
+            <Route exact path="/article/tdd" component={TDD}/>
+            <Route exact path="/article/management" component={Management}/>
           </Switch>
           <Footer/>
         </div>

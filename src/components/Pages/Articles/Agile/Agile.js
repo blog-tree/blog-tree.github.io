@@ -2,7 +2,6 @@ import React from 'react';
 import './Agile.css';
 import imgAgile from './Img/agile.jpg';
 import imgFourQuadrant from './Img/four-quadrant.jpg';
-import imgServers from './Img/Servers.jpg';
 import {Row, Col, Container} from "react-bootstrap";
 import TopicRowImg from "../../../Content/TopicRow/Img/TopicRowImg";
 import TextBlock from "../../../Content/TopicArticle/Text/TextBlock";
@@ -299,32 +298,6 @@ class Agile extends React.Component {
                             Once developers fix the defects, QA engineers verify the results.
                         </TextBlock>
 
-
-                        <SubSectionTitle>Types of possible environment for Agile SDLC</SubSectionTitle>
-                        <TopicRowImg src={imgServers} alt={`Servers`}/>
-
-                        <TextBlock>
-                            <ul>
-                                <li>
-                                    Production Server - live environment for the solution.
-                                </li>
-                                <li>
-                                    UAT / Staging - Pre-Production &mdash; environment with the same configuration and resources as production.
-                                </li>
-                                <li>
-                                    Test - Development branch of repository. (When Master is branch for pre-prod and prod with release version).
-                                </li>
-                                <li>
-                                    Nightly - If Test is not build automatically when dev merged, than nightly can be built at night.
-                                </li>
-                                <li>
-                                    PullRequest / feature - Usually it is a docker container within portainer. When PR created - container with this branch deployed.
-                                </li>
-                                <li>
-                                    Dev - development server, local environment for development. Each developer has own dev environment.
-                                </li>
-                            </ul>
-                        </TextBlock>
                     </Container>
                 </section>
             </>
