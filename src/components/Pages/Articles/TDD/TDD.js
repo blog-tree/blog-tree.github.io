@@ -15,7 +15,7 @@ class TDD extends React.Component {
                     <Container>
                         <Row>
                             <Col xs lg="5" className="text-muted">
-                                TDD
+                                Test-Driven Development
                             </Col>
                         </Row>
                     </Container>

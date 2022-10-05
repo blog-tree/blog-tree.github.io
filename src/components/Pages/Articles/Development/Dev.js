@@ -171,7 +171,56 @@ class Dev extends React.Component {
 
                         <SectionTitle>Knowledge Sharing</SectionTitle>
 
+                        <SubSectionTitle>Goals of the knowledge sharing</SubSectionTitle>
+                        <TextBlock>
+                            <ul>
+                                <li>Maintain the project</li>
+                                <li>Share standards and best practices</li>
+                                <li>Right priorities for every team member</li>
+                                <li>Decrease time of one to one knowledge sharing</li>
+                            </ul>
+                        </TextBlock>
 
+                        <SubSectionTitle>Software Development Life Cycle</SubSectionTitle>
+
+                        <TextBlock>
+                            <ul>
+                                <li>Different reviewers for pull requests.</li>
+                                <li>One developer never works on the same kind of tasks.</li>
+                                <li>Always update Knowledge Base, not after but at the same time when you develop/update a feature.</li>
+                            </ul>
+                        </TextBlock>
+
+                        <SubSectionTitle>Knowledge Base</SubSectionTitle>
+
+                        <TextBlock>
+                            <span className={`text-muted`}>Confluence, Wiki, etc.</span>
+                            <ul>
+                                <li>The project goal and description.</li>
+                                <li>The team structure and roles.</li>
+                                <li>Links to environments.</li>
+                                <li>Standards and practices.</li>
+                            </ul>
+                        </TextBlock>
+
+                        <SubSectionTitle>Onboarding</SubSectionTitle>
+
+                        <TextBlock>
+                            <ul>
+                                <li>Newcomers Guide. <span className={`text-muted`}>Small TODO list with information what
+                                    to do and in what order (create email, create account, configure authenticator, etc.).
+                                    The List of goto persons (the table with contacts of someone who can solve
+                                    something). Links or instructions of how to install the project.</span></li>
+                                <li>Small demo. <span className={`text-muted`}>Someone from the team can show and explain
+                                general picture of the project.</span></li>
+                                <li>Mentor. <span className={`text-muted`}>Someone who can help at the first time in
+                                the project.</span></li>
+                            </ul>
+                        </TextBlock>
+
+                        <SectionTitle>Technical Debt</SectionTitle>
+
+                        <TextBlock></TextBlock>
                     </Container>
                 </section>
             </>

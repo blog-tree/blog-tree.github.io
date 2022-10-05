@@ -13,6 +13,7 @@ import imgTdd from './Img/testing_tdd.png';
 import awsGlue from './Img/aws_glue.png';
 import imgSdlc from './Img/sdlc.png';
 import imgSdlcAgile from './Img/agile-sdlc.jpg';
+import imgZsh from './Img/zsh.png';
 import TopicRowComponent from "../../Content/TopicRow/Row/TopicRowComponent";
 import TopicRowH2 from "../../Content/TopicRow/H2/TopicRowH2";
 import TopicRowImg from "../../Content/TopicRow/Img/TopicRowImg";
@@ -35,6 +36,19 @@ class Main extends React.Component {
                     </Container>
 
                     <Container>
+                        <TopicRowComponent link={`/article/traefik`}>
+                            <TopicRowH2>Traefik to Dockerize local development</TopicRowH2>
+                            <TopicRowImg src={traefik} alt={`Traefik`}/>
+                            <TopicRowText><FormattedMessage id="content.traefik_description"/></TopicRowText>
+                        </TopicRowComponent>
+
+                        <TopicRowComponent link={`/article/zsh`}>
+                            <TopicRowImg src={imgZsh} alt={`Configuring Zsh`}/>
+                            <TopicRowH2>Zsh Unix Terminal</TopicRowH2>
+                            <TopicRowText>Shell designed for interactive use. My configuration to not lose it and DRY.
+                            I do not want to repeat myself. Zsh Plugins, Themes and tricks.</TopicRowText>
+                        </TopicRowComponent>
+
                         <TopicRowComponent link={`/article/management`}>
                             <TopicRowText>Project management is the processes, methods, skills,
                                 knowledge and experience to achieve specific project goals according
@@ -95,12 +109,6 @@ class Main extends React.Component {
                             <TopicRowText><FormattedMessage id="content.firebase_description"/></TopicRowText>
                             <TopicRowImg src={firebase} alt={`Firebase`}/>
                             <TopicRowH2><FormattedMessage id="content.firebase_title_small"/></TopicRowH2>
-                        </TopicRowComponent>
-
-                        <TopicRowComponent>
-                            <TopicRowImg src={traefik} alt={`Traefik`}/>
-                            <TopicRowText><FormattedMessage id="content.traefik_description"/></TopicRowText>
-                            <TopicRowH2>Traefik...</TopicRowH2>
                         </TopicRowComponent>
 
                         <TopicRowComponent>

@@ -10,6 +10,8 @@ import Sdlc from "../../Pages/Articles/Sdlc/Sdlc";
 import Dev from "../../Pages/Articles/Development/Dev";
 import TDD from "../../Pages/Articles/TDD/TDD";
 import Management from "../../Pages/Articles/Management/Management";
+import Traefik from "../../Pages/Articles/Traefik/Traefik";
+import Zsh from "../../Pages/Articles/Zsh/Zsh";
 
 const Layout = () => {
   const [state, setState] = useState({ withMenu: 'no' });
@@ -49,6 +51,8 @@ const Layout = () => {
             <Route exact path="/article/dev" component={Dev}/>
             <Route exact path="/article/tdd" component={TDD}/>
             <Route exact path="/article/management" component={Management}/>
+            <Route exact path="/article/traefik" component={Traefik}/>
+            <Route exact path="/article/zsh" component={Zsh}/>
           </Switch>
           <Footer/>
         </div>
