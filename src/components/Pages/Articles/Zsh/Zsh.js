@@ -26,7 +26,8 @@ class Zsh extends React.Component {
                             <ol>
                                 <li><code>sudo apt install zsh</code> Install Zsh</li>
                                 <li><code>sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"</code> Install OhMyZsh</li>
-                                <li><code>chsh -s $(which zsh)</code> Make Zsh as a default terminal</li>
+                                <li><code>chsh -s $(which zsh)</code> Set Zsh as a default terminal</li>
+                                <li><code></code> <a href={`https://github.com/romkatv/powerlevel10k`}>Powerlevel10k</a></li>
                             </ol>
                         </TextBlock>
                     </Container>

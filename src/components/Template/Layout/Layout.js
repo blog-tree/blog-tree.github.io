@@ -12,53 +12,59 @@ import TDD from "../../Pages/Articles/TDD/TDD";
 import Management from "../../Pages/Articles/Management/Management";
 import Traefik from "../../Pages/Articles/Traefik/Traefik";
 import Zsh from "../../Pages/Articles/Zsh/Zsh";
+import ReactGA from 'react-ga';
+
+const TRACKING_ID = 'G-6VMRK5H09P';
+ReactGA.initialize(TRACKING_ID);
 
 const Layout = () => {
-  const [state, setState] = useState({ withMenu: 'no' });
+    const [state, setState] = useState({withMenu: 'no'});
 
-  const moveBg = (className) => {
-    const withMenu = className;
-    setState({withMenu});
-  }
-
-  const scrollHandler = () => {
-    if (window.scrollY <= 30) {
-      moveBg('no');
-    } else {
-      moveBg('with-menu');
+    const moveBg = (className) => {
+        const withMenu = className;
+        setState({withMenu});
     }
-  }
 
-  useEffect(() => {
-    window.addEventListener('scroll', scrollHandler);
-    return () => {
-      window.removeEventListener('scroll', scrollHandler);
+    const scrollHandler = () => {
+        if (window.scrollY <= 30) {
+            moveBg('no');
+        } else {
+            moveBg('with-menu');
+        }
     }
-  });
 
-  return (
-    <>
-      <Router>
-        <div className={`top-bg ${state.withMenu}`}>
-          <img src={logo} alt="Blog-Tree Logo"/>
-        </div>
-        <div className={`main-container`}>
-          <Header/>
-          <Switch>
-            <Route exact path="/" component={Main}/>
-            <Route exact path="/article/agile" component={Agile}/>
-            <Route exact path="/article/sdlc" component={Sdlc}/>
-            <Route exact path="/article/dev" component={Dev}/>
-            <Route exact path="/article/tdd" component={TDD}/>
-            <Route exact path="/article/management" component={Management}/>
-            <Route exact path="/article/traefik" component={Traefik}/>
-            <Route exact path="/article/zsh" component={Zsh}/>
-          </Switch>
-          <Footer/>
-        </div>
-      </Router>
-    </>
-  );
+    useEffect(() => {
+        ReactGA.pageview(window.location.pathname + window.location.search);
+
+        window.addEventListener('scroll', scrollHandler);
+        return () => {
+            window.removeEventListener('scroll', scrollHandler);
+        }
+    });
+
+    return (
+        <>
+            <Router>
+                <div className={`top-bg ${state.withMenu}`}>
+                    <img src={logo} alt="Blog-Tree Logo"/>
+                </div>
+                <div className={`main-container`}>
+                    <Header/>
+                    <Switch>
+                        <Route exact path="/" component={Main}/>
+                        <Route exact path="/article/agile" component={Agile}/>
+                        <Route exact path="/article/sdlc" component={Sdlc}/>
+                        <Route exact path="/article/dev" component={Dev}/>
+                        <Route exact path="/article/tdd" component={TDD}/>
+                        <Route exact path="/article/management" component={Management}/>
+                        <Route exact path="/article/traefik" component={Traefik}/>
+                        <Route exact path="/article/zsh" component={Zsh}/>
+                    </Switch>
+                    <Footer/>
+                </div>
+            </Router>
+        </>
+    );
 }
 
 export default Layout;

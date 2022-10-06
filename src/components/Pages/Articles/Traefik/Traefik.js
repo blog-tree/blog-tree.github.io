@@ -59,11 +59,21 @@ class Traefik extends React.Component {
                                             <li>Windows Key + R</li>
                                             <li>type: optionalfeatures.exe</li>
                                             <li>Check Windows Subsystem for Linux</li>
+                                            <li>Check Hyper-V to use WSL v2</li>
                                             <li>It will restart windows at the end</li>
                                         </ul>
                                         After that you can open <i>Start -> Ubuntu 22 LTS</i> and that will finish
                                         installation.
                                     </blockquote>
+                                    <blockquote>In cmd : <code>wsl -l -v</code> should show v2 or try to do
+                                        <code>wsl --set-default-version 2</code></blockquote>
+                                </li>
+                                <li>(Optional) Check that Windows Terminal installed. Start -> wt.
+                                    <blockquote className={`text-muted`}>
+                                        If it is not installed<br />
+                                        Start -> Store -> Search for Windows Terminal -> install
+                                    </blockquote>
+                                    <blockquote>In the WT: Ctrl + , -> Default Ubuntu 22</blockquote>
                                 </li>
                                 <li>GoTo <a href={`https://docker.com`}>docker.com</a> -> Download Docker Desktop</li>
                             </ol>
