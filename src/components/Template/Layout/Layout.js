@@ -12,10 +12,9 @@ import TDD from "../../Pages/Articles/TDD/TDD";
 import Management from "../../Pages/Articles/Management/Management";
 import Traefik from "../../Pages/Articles/Traefik/Traefik";
 import Zsh from "../../Pages/Articles/Zsh/Zsh";
-import ReactGA from 'react-ga';
+import ReactGA from 'react-ga4';
 
-const TRACKING_ID = 'G-6VMRK5H09P';
-ReactGA.initialize(TRACKING_ID);
+ReactGA.initialize('G-6VMRK5H09P');
 
 const Layout = () => {
     const [state, setState] = useState({withMenu: 'no'});
@@ -34,7 +33,7 @@ const Layout = () => {
     }
 
     useEffect(() => {
-        ReactGA.pageview(window.location.pathname + window.location.search);
+        ReactGA.send({ hitType: "pageview", page: window.location.pathname + window.location.search });
 
         window.addEventListener('scroll', scrollHandler);
         return () => {
