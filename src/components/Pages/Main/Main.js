@@ -8,6 +8,7 @@ import traefik from './Img/traefik.png';
 import serverless from './Img/serverless.png';
 import ansible from './Img/ansible.png';
 import imgDev from './Img/software-development.jpg';
+import imgQa from './Img/qa.png';
 import imgPm from './Img/pm.jpg';
 import imgTdd from './Img/testing_tdd.png';
 import awsGlue from './Img/aws_glue.png';
@@ -36,6 +37,13 @@ class Main extends React.Component {
                     </Container>
 
                     <Container>
+                        <TopicRowComponent link={`/article/qa`}>
+                            <TopicRowText>How to control the quality of production? QA Metrics, defect management,
+                                automated testing.</TopicRowText>
+                            <TopicRowH2>Quality Assurance</TopicRowH2>
+                            <TopicRowImg src={imgQa} alt={`Quality Assurance`}/>
+                        </TopicRowComponent>
+
                         <TopicRowComponent link={`/article/traefik`}>
                             <TopicRowH2>Traefik to Dockerize local development</TopicRowH2>
                             <TopicRowImg src={traefik} alt={`Traefik`}/>

@@ -13,6 +13,7 @@ import Management from "../../Pages/Articles/Management/Management";
 import Traefik from "../../Pages/Articles/Traefik/Traefik";
 import Zsh from "../../Pages/Articles/Zsh/Zsh";
 import ReactGA from 'react-ga4';
+import QA from "../../Pages/Articles/QA/QA";
 
 ReactGA.initialize('G-6VMRK5H09P');
 
@@ -58,6 +59,7 @@ const Layout = () => {
                         <Route exact path="/article/management" component={Management}/>
                         <Route exact path="/article/traefik" component={Traefik}/>
                         <Route exact path="/article/zsh" component={Zsh}/>
+                        <Route exact path="/article/qa" component={QA}/>
                     </Switch>
                     <Footer/>
                 </div>

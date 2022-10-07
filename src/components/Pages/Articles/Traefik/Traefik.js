@@ -43,6 +43,15 @@ class Traefik extends React.Component {
 
                         <SubSectionTitle>How to install Dockerizer</SubSectionTitle>
 
+                        <TextBlock>
+                            <code>
+                                git clone https://github.com/zagovorichev/dockerizer.git <br/>
+                                docker network create traefik-public <br/>
+                                docker-compose up -d
+                            </code> <br/>
+                            And check that <a href={`http://whoami.docker.localhost`}>WhoAmI</a> works.
+                        </TextBlock>
+
                         <SubSectionTitle>Secure protocol HTTPS from the box</SubSectionTitle>
 
                         <SectionTitle>Windows WSL2 + Windows Docker Configuration</SectionTitle>
@@ -59,7 +68,6 @@ class Traefik extends React.Component {
                                             <li>Windows Key + R</li>
                                             <li>type: optionalfeatures.exe</li>
                                             <li>Check Windows Subsystem for Linux</li>
-                                            <li>Check Hyper-V to use WSL v2</li>
                                             <li>It will restart windows at the end</li>
                                         </ul>
                                         After that you can open <i>Start -> Ubuntu 22 LTS</i> and that will finish
@@ -67,6 +75,8 @@ class Traefik extends React.Component {
                                     </blockquote>
                                     <blockquote>In cmd : <code>wsl -l -v</code> should show v2 or try to do
                                         <code>wsl --set-default-version 2</code></blockquote>
+                                    <blockquote>And if you have already installed Linux distributive with WSL v1
+                                        <code>wsl --set-version Ubuntu-22.04 2</code></blockquote>
                                 </li>
                                 <li>(Optional) Check that Windows Terminal installed. Start -> wt.
                                     <blockquote className={`text-muted`}>
@@ -75,7 +85,14 @@ class Traefik extends React.Component {
                                     </blockquote>
                                     <blockquote>In the WT: Ctrl + , -> Default Ubuntu 22</blockquote>
                                 </li>
-                                <li>GoTo <a href={`https://docker.com`}>docker.com</a> -> Download Docker Desktop</li>
+                                <li>GoTo <a href={`https://docker.com`}>docker.com</a> -> Download Docker Desktop
+                                <br/>
+                                    <span className={`text-muted`}>
+                                        After that WSL 2 has docker installed or check
+                                    Docker Desktop with WSL 2 instructions: https://docs.docker.com/go/wsl2 <br/>
+                                    <code>docker ps</code> if doesn't work: <code>sudo usermod -aG docker YOUR_USERNAME</code>
+                                    and restart terminal.</span>
+                                </li>
                             </ol>
                         </TextBlock>
 
