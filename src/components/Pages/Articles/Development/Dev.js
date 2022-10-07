@@ -220,7 +220,93 @@ class Dev extends React.Component {
 
                         <SectionTitle>Technical Debt</SectionTitle>
 
-                        <TextBlock></TextBlock>
+                        <TextBlock>Technical Debt is the implied cost of additional rework caused by choosing an easy
+                            (limited) solution now instead of using a better approach that would take longer.</TextBlock>
+
+                        <TextBlock>
+                            Consist of 2 parts:
+                            <ul>
+                                <li>Dept itself</li>
+                                <li>The interest (extra efforts to work with code because of the debt)</li>
+                            </ul>
+                        </TextBlock>
+
+                        <TextBlock>
+                            There are 2 kinds of tech debt
+                            <ul>
+                                <li>Intentional. <span className={`text-muted`}>When everyone knows why do we need that
+                                    (f.e. Proof of Concept - POC, or a Minimum Viable Product - MVP, or meet deadline
+                                    to publish feature).</span></li>
+                                <li>Unintentional. <span className={`text-muted`}>Lack of tech knowledge, project
+                                process issues.</span></li>
+                            </ul>
+                        </TextBlock>
+
+                        <SubSectionTitle>Technical Debt Indicators</SubSectionTitle>
+
+                        <TextBlock>
+                            <ul>
+                                <b>Delivery</b>
+                                <li>Quality Degradation. <span className={`text-muted`}>Production defects and bugs;
+                                Regression, when bugs appears in different part of the system during the regression
+                                    tests; A list of known issues.</span></li>
+                                <li>High Cost of System Change. <span className={`text-muted`}>Adding new features
+                                should not take longer as the project grows.</span></li>
+                                <li>Spikes and POC's in limited timeline. <span className={`text-muted`}>If during
+                                these tasks we met a lot of issues and side effects.</span></li>
+                                <li>If only couple of team-members can do feature/changes or it is hard to understand the
+                                project for newcomer.</li>
+                                <b>Architecture</b>
+                                <li>Difficulties in integration something new.</li>
+                                <li>Hard to reuse code.</li>
+                                <li>Hard to scale an app.</li>
+                                <li>Hard to maintain.</li>
+                                <b>Team</b>
+                                <li>Delays.</li>
+                                <li>Wrong estimations during planning.</li>
+                                <li>Demotivation.</li>
+                            </ul>
+                        </TextBlock>
+
+                        <SubSectionTitle>How to manage technical dept</SubSectionTitle>
+
+                        <TextBlock>
+                            <ul>
+                                <li>Up-to-date info about tech dept.</li>
+                                <li>Backlog.</li>
+                                <li>Tools. <span className={`text-muted`}>Quality gate tools like SonarQube.</span></li>
+                            </ul>
+                        </TextBlock>
+
+                        <TextBlock>
+                            <b>Project Statuses (RAG)</b>
+                            <ul>
+                                <li>Red means there are issues your team needs to address for the project to be
+                                    delivered successfully.</li>
+                                <li>Amber signals the project has some potential issues that your team may need to
+                                    revisit in the future.</li>
+                                <li>Green indicates healthy project performance.</li>
+                            </ul>
+                        </TextBlock>
+
+                        <SubSectionTitle>Instructions to solve tech debt</SubSectionTitle>
+
+                        <TextBlock>
+                            <ul>
+                                <b>Leaders</b>
+                                <li>Plan.</li>
+                                <li>Support and motivate your squad.</li>
+                                <li>Report TD statistic.</li>
+                                <li>Involve Stakeholders to tech debt tasks to avoid miscommunication.</li>
+
+                                <b>Devs</b>
+                                <li>Code Smells.</li>
+                                <li>Code Reviews.</li>
+                                <li>Knowledge-sharing.</li>
+                                <li>Code analysis tools.</li>
+                                <li>Automated tests.</li>
+                            </ul>
+                        </TextBlock>
                     </Container>
                 </section>
             </>
