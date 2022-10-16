@@ -73,6 +73,9 @@ class Traefik extends React.Component {
                                         <a href="https://github.com/FiloSottile/mkcert">https://github.com/FiloSottile/mkcert</a></span>
                                 </li>
                                 <li>⊞ Copy all root certificates from WSL 2 to Windows</li>
+                                <li>Goto <b>dockerizer/docker/traefik/certs</b> <br/>
+                                And generate new certificates: <br/>
+                                    <code>mkcert "*.docker.localhost" "traefik.docker" "*.docker"</code></li>
                             </ul>
                         </TextBlock>
 
