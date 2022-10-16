@@ -162,8 +162,10 @@ class QA extends React.Component {
                         <SubSectionTitle>Test Plan</SubSectionTitle>
                         <TextBlock>
                             Focuses on the "what" and the "when" of testing.
+                        </TextBlock>
+                        <TextBlock>
+                            Have include
                             <ul>
-                                have to include:
                                 <li>A project-specific impact on testing</li>
                                 <li>The scope of testing</li>
                                 <li>Quality and acceptance criteria</li>
@@ -175,14 +177,42 @@ class QA extends React.Component {
                         <SubSectionTitle>Test Strategy</SubSectionTitle>
                         <TextBlock>
                             Focuses on the "how" of testing.
+                        </TextBlock>
+
+                        <TextBlock>
+                            Can include
                             <ul>
-                                Can include:
                                 <li>How the team will organize testing</li>
                                 <li>Which testing types will be in scope to address product risks</li>
                                 <li>Which test design and execution approaches the team will use for a testing type</li>
                             </ul>
                         </TextBlock>
 
+                        <SectionTitle>Test case management</SectionTitle>
+
+                        <TextBlock>Correct test case management decrease duplication of tests, adds standards of testing,
+                        centralize metrics and reports, provides history of changes, verify test completion, documentation.</TextBlock>
+
+                        <TextBlock>
+                            <ul>
+                                <li>Test Case. <span className={`text-muted`}>Steps to verify that it works.</span></li>
+                                <li>Test Suite. <span className={`text-muted`}>Collection of test cases to verify
+                                functionality</span> <br/>
+                                    <ul>
+                                        <li><b>Sanity</b> Checks if the bugfix fixed the bug.</li>
+                                        <li><b>Smoke</b> Checks basic functionality.</li>
+                                        <li><b>Regression</b> Checks existing functionality (to verify
+                                            that changes don't break anything).</li>
+                                        <li><b>UI</b> Checks how user interacts with app.</li>
+                                        <li><b>Performance</b> Checks and measures the performance of the system under
+                                            different loads</li>
+                                        <li><b>API</b> Checks functionality, performance, security of API</li>
+                                    </ul>
+                                </li>
+                                <li>Test Plan. <span className={`text-muted`}>Scope of testing, resources, complete
+                                    timeline of test activities.</span></li>
+                            </ul>
+                        </TextBlock>
                     </Container>
                 </section>
             </>

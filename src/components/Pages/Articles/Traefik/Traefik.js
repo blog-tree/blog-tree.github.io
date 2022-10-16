@@ -54,6 +54,29 @@ class Traefik extends React.Component {
 
                         <SubSectionTitle>Secure protocol HTTPS from the box</SubSectionTitle>
 
+                        <TextBlock>
+                            <blockquote className={`blockquote text-muted`}>If you want to do it for Windows with WSL2 then there are
+                            some extra steps marked with ⊞. If not - just skip them.</blockquote>
+
+                            <ul>
+                                <li>⊞ Install chocolately. <br/>
+                                    Powershell command:
+                                    <code>Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))</code>
+                                </li>
+                                <li>⊞ Install mkcert for Windows from Powershell: <code>choco install mkcert</code></li>
+                                <li>⊞ Find and save path to CertRoot: <code>mkcert -CAROOT</code></li>
+                                <li>Install mkcert for Linux: <br/>
+                                    <code>sudo apt install libnss3-tools</code> <br/>
+                                    <code>curl -JLO "https://dl.filippo.io/mkcert/latest?for=linux/amd64"</code> <br/>
+                                    <code>sudo cp mkcert-v*-linux-amd64 /usr/local/bin/mkcert</code> <br/>
+                                    <span className={`text-muted`}>or check preferable for you way to install mkcert:
+                                        <a href="https://github.com/FiloSottile/mkcert">https://github.com/FiloSottile/mkcert</a></span>
+                                </li>
+                                <li>⊞ Copy all root certificates from WSL 2 to Windows</li>
+                            </ul>
+                        </TextBlock>
+
+
                         <SectionTitle>Windows WSL2 + Windows Docker Configuration</SectionTitle>
 
                         <TextBlock>
