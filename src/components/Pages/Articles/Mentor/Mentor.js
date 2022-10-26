@@ -208,7 +208,20 @@ const Mentor = () => {
                     <TextBlock>
                         <b>Mediator in conflict</b>
                         <ul>
-                            <li></li>
+                            <li>Offer help. <span className={`text-muted`}>It is important to know that everyone
+                            involved into this conflict accept your role as a mediator.</span></li>
+                            <li>Information gathering. <span className={`text-muted`}>Everyone should be heard.</span></li>
+                            <li>Meeting. <span className={`text-muted`}>
+                                <ol>
+                                    <li>Meeting goal.</li>
+                                    <li>Help the parties to articulate the essence of the conflict and outline their
+                                        common interest.</li>
+                                    <li>Discuss the positions of the parties.</li>
+                                    <li>Get common solution.</li>
+                                    <li>Record the arrangements.</li>
+                                    <li>Monitoring plan.</li>
+                                </ol>
+                            </span></li>
                         </ul>
                     </TextBlock>
                 </Container>
