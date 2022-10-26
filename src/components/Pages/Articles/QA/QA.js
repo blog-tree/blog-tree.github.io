@@ -5,6 +5,9 @@ import TextBlock from "../../../Content/TopicArticle/Text/TextBlock";
 import MainTitle from "../../../Content/TopicArticle/MainTitle/MainTitle";
 import SubSectionTitle from "../../../Content/TopicArticle/SectionTitle/SubSectionTitle";
 import SectionTitle from "../../../Content/TopicArticle/SectionTitle/SectionTitle";
+import imgDt1 from "./Img/dt.png";
+import imgDt2 from "./Img/dt2.png";
+import TopicRowImg from "../../../Content/TopicRow/Img/TopicRowImg";
 
 class QA extends React.Component {
     render() {
@@ -211,6 +214,103 @@ class QA extends React.Component {
                                 </li>
                                 <li>Test Plan. <span className={`text-muted`}>Scope of testing, resources, complete
                                     timeline of test activities.</span></li>
+                            </ul>
+                        </TextBlock>
+
+                        <SubSectionTitle>Tests Design</SubSectionTitle>
+
+                        <TextBlock>
+                            <ul>
+                                <li>Boundary Value Analysis <b>BVA</b>. <span className={`text-muted`}>Edge cases
+                                should be tested.</span></li>
+                                <li>Equivalence Partitioning <b>EP</b>. <span className={`text-muted`}>Tests must be
+                                    created to cover all conditions in the code.</span></li>
+                                <li>Decision table <b>DT</b>. <span className={`text-muted`}>A concise visual representation for
+                                    specifying which actions to perform depending on given conditions.</span> <br/>
+                                    <div className="row">
+                                        <div className="col-6">
+                                            <TopicRowImg src={imgDt1} alt={`DT1`}/>
+                                        </div>
+                                        <div className="col-6">
+                                            <TopicRowImg src={imgDt2} alt={`DT2`}/>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>State Transition Diagram. <span className={`text-muted`}>A state diagram is a type
+                                    of diagram used in computer science and related fields to describe the behavior
+                                    of systems.</span></li>
+                                <li>Use Case Testing. <span className={`text-muted`}>Is a brief description of a
+                                    particular use of the software application by an actor or user.</span></li>
+                            </ul>
+                        </TextBlock>
+
+                        <SubSectionTitle>Test Case Life Cycle</SubSectionTitle>
+                        <TextBlock>
+                            The test case life cycle documents each step you will take before and after writing your
+                            test cases.
+                            <ul>
+                                <li>Requirements analysis. <span className={`text-muted`}>Getting all the data that we
+                                need for test creation (Environments to run tests on, tools, income data for the
+                                    test).</span></li>
+                                <li>Test Case.</li>
+                                <li>Mapping. <span className={`text-muted`}>Map requirements to test case to verify that
+                                all requirements covered with test case.</span></li>
+                                <li>Review. <span className={`text-muted`}>
+                                    <ol>
+                                        <li>Self-Review. Test should be created according to SRC (<b>Software
+                                            Requirement Specification</b>) describes the software’s purpose and FRD
+                                        (<b>Functional Requirements Document</b>) is similar to a contract stating the
+                                            functional requirements needed for software to meet agreed-upon
+                                            capabilities.</li>
+                                        <li>Peer Review. Another tester reviews it.</li>
+                                        <li>Supervisor Review. If lead/architect should review it.</li>
+                                    </ol>
+                                </span></li>
+                                <li>Execution. <span className={`text-muted`}>Run test case (define how and who should
+                                    run the test and run it).</span></li>
+                                <li>Regression testing. <span className={`text-muted`}>Run all other tests to check
+                                that this functionality doesn't break anything else.</span></li>
+                                <li>Test Case Inspection. <span className={`text-muted`}>Review all tests to identify
+                                duplications.</span></li>
+                            </ul>
+                        </TextBlock>
+
+                        <TextBlock>
+                            Peer review or Self-review, what to check?
+                            <ul>
+                                <li>Functionality Coverage. <span className={`text-muted`}>Check that test case covers
+                                full functionality that should be checked.</span></li>
+                                <li>Spelling.</li>
+                                <li>Grammar.</li>
+                                <li>Template/Standards. <span className={`text-muted`}>All test cases should have the
+                                same standard view.</span></li>
+                                <li>Clear description in common for all testers words.</li>
+                                <li>Duplication.</li>
+                                <li>Obsolescence. <span className={`text-muted`}>Test could be redundant or obsolete
+                                    and must be removed.</span></li>
+                            </ul>
+                        </TextBlock>
+
+                        <SubSectionTitle>Test Coverage</SubSectionTitle>
+                        <TextBlock>Metric that shows how many requirements have tests.</TextBlock>
+
+                        <TextBlock>
+                            <b>Requirement Test Coverage Report</b>
+                            <ul>
+                                <li>Status of the testing. <span className={`text-muted`}>Passed and Failed test
+                                    cases.</span></li>
+                                <li>Track which requirement are covered with what test cases.</li>
+                                <li>Track requirements without tests.</li>
+                            </ul>
+                        </TextBlock>
+
+                        <TextBlock>
+                            <b>Requirement Traceability Matrix</b>
+                            <ul>
+                                <li>Document that delivered at the conclusion of <span title={`software development
+                                 life cycle`}>SDLC</span>.</li>
+                                <li>All requirements and test cases to them.</li>
+
                             </ul>
                         </TextBlock>
                     </Container>
