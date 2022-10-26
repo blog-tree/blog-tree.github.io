@@ -11,6 +11,8 @@ import imgDev from './Img/software-development.jpg';
 import imgQa from './Img/qa.png';
 import imgPm from './Img/pm.jpg';
 import imgTdd from './Img/testing_tdd.png';
+import imgMentoring from './Img/mentoring.png';
+import imgFreelance from './Img/freelance.png';
 import awsGlue from './Img/aws_glue.png';
 import imgSdlc from './Img/sdlc.png';
 import imgSdlcAgile from './Img/agile-sdlc.jpg';
@@ -37,11 +39,24 @@ class Main extends React.Component {
                     </Container>
 
                     <Container>
+                        <TopicRowComponent link={`/article/freelance`}>
+                            <TopicRowImg src={imgFreelance} alt={`Freelance`}/>
+                            <TopicRowH2>Freelance / Find Job Resources</TopicRowH2>
+                            <TopicRowText>List with links to resources where it is possible to find remote job.</TopicRowText>
+                        </TopicRowComponent>
+
+                        <TopicRowComponent link={`/article/mentor`}>
+                            <TopicRowH2>Mentor</TopicRowH2>
+                            <TopicRowText>Who is Mentor. And why each of us should understand comunications in the
+                                team. Conflict solving.</TopicRowText>
+                            <TopicRowImg src={imgMentoring} alt={`Mentoring`}/>
+                        </TopicRowComponent>
+
                         <TopicRowComponent link={`/article/qa`}>
+                            <TopicRowImg src={imgQa} alt={`Quality Assurance`}/>
                             <TopicRowText>How to control the quality of production? QA Metrics, defect management,
                                 automated testing.</TopicRowText>
                             <TopicRowH2>Quality Assurance</TopicRowH2>
-                            <TopicRowImg src={imgQa} alt={`Quality Assurance`}/>
                         </TopicRowComponent>
 
                         <TopicRowComponent link={`/article/traefik`}>
